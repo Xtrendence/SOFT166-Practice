@@ -11,10 +11,28 @@ body {
 	color:rgb(75,75,75);
 	margin:0;
 	padding:0;
-	overflow:visible;
+	overflow:hidden;
 }
 a {
 	text-decoration:none;
+}
+.noselect {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+.body-wrapper {
+	position:absolute;
+	z-index:10;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	transition:left 0.25s;
 }
 
 .icon-wrapper {
@@ -32,7 +50,7 @@ a {
 .icon-wrapper:hover {
 	box-shadow:var(--shadow-darker);
 }
-.icon-wrapper svg {
+.icon-wrapper .menu-icon {
 	width:30px;
 	height:30px;
 	padding:15px;
@@ -43,14 +61,27 @@ a {
 	top:20px;
 	left:20px;
 }
+.icon-wrapper .github-icon {
+	width:30px;
+	height:30px;
+	padding:15px;
+	fill:url("#gradient-github");
+	shape-rendering:geometricPrecision;
+}
+.icon-wrapper.github {
+	top:20px;
+	right:20px;
+}
 
 .menu-wrapper {
 	position:absolute;
 	left:0;
 	top:0;
 	z-index:11;
-	width:150px;
+	width:0;
+	overflow:hidden;
 	height:100%;
+	transition:width 0.25s;
 	background:rgb(250,250,250);
 	box-shadow:var(--shadow-dark);
 }
@@ -58,12 +89,17 @@ a {
 	display:block;
 	font-size:16px;
 	font-weight:bold;
-	color:rgb(150,150,150);
+	color:rgb(125,125,125);
 	line-height:60px;
 	width:calc(100% - 40px);
 	padding:0 20px 0 20px;
+	transition:background 0.25s, color 0.25s;
 	background:rgb(240,240,240);
 }
 .menu-wrapper a:nth-of-type(odd) span {
-	background:none;
+	background:rgb(250,250,250);
+}
+.menu-wrapper a:hover span, .menu-wrapper a.active span {
+	background:rgb(125,125,125);
+	color:rgb(250,250,250);
 }
