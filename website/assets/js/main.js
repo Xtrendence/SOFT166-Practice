@@ -7,8 +7,8 @@ $(document).ready(function() {
 	$(".icon-wrapper.menu").on("click", function() {
 		toggleMenu();
 	});
-	function toggleMenu(action) {
-		if($(".icon-wrapper.menu").hasClass("active") || action == "close") {
+	function toggleMenu(override) {
+		if($(".icon-wrapper.menu").hasClass("active") || override == "close") {
 			$(".icon-wrapper.menu").removeClass("active");
 			$(".menu-wrapper").css("width", "0");
 			$(".body-wrapper").css("left", "0");
