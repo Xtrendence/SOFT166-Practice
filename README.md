@@ -12,8 +12,10 @@ No. The code's written by myself, with the exception of jQuery itself of course,
 
 ### Notice
 
-This was made as part of a university assignment. For a more complex example of my coding, please see other projects such as [X:/Anonymous](https://github.com/Xtrendence/X-Anonymous).
+This was made as part of a university assignment. For a more complex example of my coding, please see other projects such as [X:/Anonymous](https://github.com/Xtrendence/X-Anonymous) or [X:/OS](https://github.com/Xtrendence/X-OS).
  
 ---
+
+### Planning
 
 You can view the planning for this web app by looking at its [Trello project board](https://trello.com/b/RTbY8O4O/soft166-practice).
