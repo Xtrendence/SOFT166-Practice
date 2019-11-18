@@ -16,6 +16,10 @@ body {
 a {
 	text-decoration:none;
 }
+button {
+	border:none;
+	outline:none;
+}
 .noselect {
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -23,6 +27,10 @@ a {
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
+}
+
+::-webkit-scrollbar {
+	display:none;
 }
 
 .body-wrapper {
@@ -61,6 +69,17 @@ a {
 	top:20px;
 	left:20px;
 }
+.icon-wrapper .reset-icon {
+	width:30px;
+	height:30px;
+	padding:15px;
+	fill:url("#gradient-reset");
+	shape-rendering:geometricPrecision;
+}
+.icon-wrapper.reset {
+	top:100px;
+	left:20px;
+}
 .icon-wrapper .github-icon {
 	width:30px;
 	height:30px;
@@ -71,6 +90,32 @@ a {
 .icon-wrapper.github {
 	top:20px;
 	right:20px;
+}
+
+.icon-title {
+	position:absolute;
+	background:rgb(250,250,250);
+	color:rgb(100,100,100);
+	font-weight:bold;
+	font-size:14px;
+	line-height:40px;
+	padding:0 15px 0 15px;
+	border-radius:20px;
+	text-align:center;
+	opacity:0;
+	transition:opacity 0.35s;
+}
+.icon-title.menu {
+	left:90px;
+	top:30px;
+}
+.icon-title.reset {
+	left:90px;
+	top:110px;
+}
+.icon-title.github {
+	right:90px;
+	top:30px;
 }
 
 .menu-wrapper {
@@ -102,4 +147,153 @@ a {
 .menu-wrapper a:hover span, .menu-wrapper a.active span {
 	background:rgb(125,125,125);
 	color:rgb(250,250,250);
+}
+
+.application-header-wrapper {
+	width:400px;
+	position:absolute;
+	top:20px;
+	font-size:0;
+	left:calc(50% - 400px / 2);
+	display:block;
+	text-align:center;
+	height:60px;
+}
+.application-score {
+	width:60px;
+	font-weight:bold;
+	font-size:18px;
+	box-shadow:var(--shadow-dark);
+	border-radius:20px;
+	display:inline-block;
+	text-align:center;
+	line-height:60px;
+	background:rgb(250,250,250);
+	color:rgb(100,100,100);
+}
+.application-score.x {
+	background:#c6ecff;
+	color:#6186f6;
+}
+.application-score.o {
+	background:#ffc6e4;
+	color:#dc529b;
+}
+.application-header {
+	width:240px;
+	font-weight:bold;
+	font-size:18px;
+	margin:0 20px 0 20px;
+	box-shadow:var(--shadow-dark);
+	border-radius:20px;
+	display:inline-block;
+	text-align:center;
+	line-height:60px;
+	background:rgb(250,250,250);
+	color:rgb(100,100,100);
+}
+.application-player {
+	text-transform:uppercase;
+	color:#6186f6;
+}
+.application-player[data-player="x"] {
+	color:#6186f6;
+}
+.application-player[data-player="o"] {
+	color:#dc529b;
+}
+
+.application-wrapper {
+	position:absolute;
+	background:rgb(250,250,250);
+	box-shadow:var(--shadow-dark);
+	width:400px;
+	height:400px;
+	top:calc(50% - 400px / 2);
+	left:calc(50% - 400px / 2);
+	overflow:hidden;
+	border-radius:20px;
+}
+.application-overlay {
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:14;
+	position:absolute;
+	background:rgba(0,0,0,0.8);
+	display:none;
+}
+.application-restart {
+	position:absolute;
+	z-index:15;
+	padding:0;
+	height:60px;
+	width:200px;
+	top:calc(50% - 60px / 2);
+	left:calc(50% - 200px / 2);
+	color:rgb(100,100,100);
+	font-size:20px;
+	font-weight:bold;
+	border-radius:20px;
+	cursor:pointer;
+	transition:opacity 0.25s;
+	opacity:1;
+	background:rgb(250,250,250);
+}
+.application-restart:hover {
+	opacity:0.8;
+}
+.application-wrapper table {
+	border-spacing:0;
+	width:100%;
+	height:100%;
+}
+.application-wrapper tr {
+	width:100%;
+	height:33.3333%;
+}
+.application-wrapper td {
+	width:33.3333%;
+	height:33.3333%;
+	border-style:solid;
+	border-width:0;
+	border-color:rgb(200,200,200);
+	transition:background 0.25s;
+	cursor:pointer;
+	font-size:54px;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align:center;
+	color:rgb(150,150,150);
+}
+.application-wrapper td:hover {
+	background:rgb(230,230,230);
+}
+.application-wrapper .top.left {
+	border-width:0 0 4px 0;
+}
+.application-wrapper .top.middle {
+	border-width:0 4px 4px 4px;
+}
+.application-wrapper .top.right {
+	border-width:0 0 4px 0;
+}
+.application-wrapper .middle.left {
+	border-width:0 0 4px 0;
+}
+.application-wrapper .middle.center {
+	border-width:0 4px 4px 4px;
+}
+.application-wrapper .middle.right {
+	border-width:0 0 4px 0;
+}
+.application-wrapper .bottom.left {
+	border-width:0;
+}
+.application-wrapper .bottom.middle {
+	border-width:0 4px 0 4px;
+}
+.application-wrapper .bottom.right {
+	border-width:0;
 }

@@ -1,0 +1,77 @@
+@media screen and (max-width:800px) {
+	.icon-title {
+		visibility:hidden;
+	}
+}
+@media screen and (max-width:600px) {
+	.icon-wrapper.reset {
+		top:20px;
+		left:100px;
+	}
+	.application-header-wrapper {
+		top:100px;
+	}
+	.application-wrapper {
+		width:400px;
+		height:400px;
+		top:auto;
+		left:calc(50% - 400px / 2);
+		bottom:100px;
+	}
+}
+@media screen and (max-width:440px) {
+	.application-header-wrapper {
+		width:300px;
+		left:calc(50% - 300px / 2);
+	}
+	.application-header {
+		width:180px;
+		line-height:40px;
+		font-size:16px;
+	}
+	.application-score {
+		font-size:16px;
+		line-height:40px;
+		width:40px;
+	}
+	.application-wrapper {
+		width:300px;
+		height:300px;
+		top:160px;
+		left:calc(50% - 300px / 2);
+	}
+}
+
+@media screen and (max-height:600px) {
+	.application-wrapper {
+		width:300px;
+		height:300px;
+		top:calc(50% - 300px / 2);
+		left:calc(50% - 300px / 2);
+	}
+}
+@media screen and (max-height:500px) {
+	.application-wrapper {
+		width:200px;
+		height:200px;
+		top:calc(50% - 200px / 2);
+		left:calc(50% - 200px / 2);
+	}
+}
+
+@media screen and (max-width:600px) and (max-height:680px) {
+	.application-wrapper {
+		width:300px;
+		height:300px;
+		top:auto;
+		left:calc(50% - 300px / 2);
+	}
+}
+@media screen and (max-width:600px) and (max-height:580px) {
+	.application-wrapper {
+		width:200px;
+		height:200px;
+		top:auto;
+		left:calc(50% - 200px / 2);
+	}
+}

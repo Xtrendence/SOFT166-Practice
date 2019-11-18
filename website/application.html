@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="./assets/css/light.css">
+		<link rel="stylesheet" href="./assets/css/resize.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
@@ -13,7 +14,6 @@
 		<meta name="msapplication-config" content="./assets/img/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 		<script src="./assets/js/jquery.js"></script>
-		<script src="./assets/js/utils.js"></script>
 		<script src="./assets/js/main.js"></script>
 		<title>Tic-Tac-Hue | Application</title>
 	</head>
@@ -36,6 +36,26 @@
 					</defs>
 				</svg>
 			</div>
+			<span class="icon-title noselect menu left">Menu</span>
+			<div class="icon-wrapper reset">
+				<svg class="reset-icon" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z"/>
+					<defs>
+						<linearGradient id="gradient-reset" style="transform:rotate(20deg) scale(1.3);">
+							<stop offset="5%" stop-color="#33b7f6"/>
+							<stop offset="20%" stop-color="#479df8"/>
+							<stop offset="25%" stop-color="#6186f6"/>
+							<stop offset="35%" stop-color="#8464f0"/>
+							<stop offset="45%" stop-color="#ae57cb"/>
+							<stop offset="60%" stop-color="#dc529b"/>
+							<stop offset="65%" stop-color="#e35691"/>
+							<stop offset="80%" stop-color="#f35c71"/>
+							<stop offset="100%" stop-color="#fc5b57"/>
+						</linearGradient>
+					</defs>
+				</svg>
+			</div>
+			<span class="icon-title noselect reset left">Reset</span>
+			<span class="icon-title noselect github left">GitHub</span>
 			<a href="https://www.github.com/Xtrendence/SOFT166-Practice/" target="_blank">
 				<div class="icon-wrapper github">
 					<svg class="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
@@ -55,6 +75,33 @@
 					</svg>
 				</div>
 			</a>
+			<div class="application-header-wrapper">
+				<span class="application-score noselect x">0</span>
+				<span class="application-header noselect active">It's <span class="application-player">X</span>'s Turn</span>
+				<span class="application-score noselect o">0</span>
+			</div>
+			<div class="application-wrapper">
+				<table>
+					<tr>
+						<td class="top left" data-cell="1"></td>
+						<td class="top middle" data-cell="2"></td>
+						<td class="top right" data-cell="3"></td>
+					</tr>
+					<tr>
+						<td class="middle left" data-cell="4"></td>
+						<td class="middle center" data-cell="5"></td>
+						<td class="middle right" data-cell="6"></td>
+					</tr>
+					<tr>
+						<td class="bottom left" data-cell="7"></td>
+						<td class="bottom middle" data-cell="8"></td>
+						<td class="bottom right" data-cell="9"></td>
+					</tr>
+				</table>
+				<div class="application-overlay">
+					<button class="application-restart">Play Again</button>
+				</div>
+			</div>
 		</div>
 		<div class="menu-wrapper noselect">
 			<a href="./index.html"><span>Home</span></a>
