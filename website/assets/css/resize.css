@@ -53,6 +53,11 @@
 		left:calc(50% - 300px / 2);
 	}
 }
+@media screen and (max-width:400px) {
+	.section-input {
+		width:calc(100% - 40px - 60px);
+	}
+}
 
 @media screen and (max-height:600px) {
 	.application-wrapper {

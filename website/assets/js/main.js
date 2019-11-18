@@ -147,22 +147,22 @@ $(document).ready(function() {
 
 	// Light functions.
 	function light(action, args) {
-		// Default smart bulb IP, ID, and API key.
+		// Default smart bulb API key, bulb IP, and bulb ID.
+		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
 		var bulbIP = "http://192.168.0.50/api/";
 		var bulbID = "13";
-		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
-
-		// If the client's browser's local storage has entries for the IP, ID, or API key, then those are used instead of the default ones.
+		
+		// If the client's browser's local storage has entries for the API key, bulb IP, or bulb ID, then those are used instead of the default ones.
+		if(window.localStorage.getItem("api-key") != null) {
+			apiKey = window.localStorage.getItem("api-key");
+		}
 		if(window.localStorage.getItem("bulb-ip") != null) {
 			bulbIP = "http://" + window.localStorage.getItem("bulb-ip") + "/api/";
 		}
 		if(window.localStorage.getItem("bulb-id") != null) {
 			bulbID = window.localStorage.getItem("bulb-id");
 		}
-		if(window.localStorage.getItem("api-key") != null) {
-			apiKey = window.localStorage.getItem("api-key");
-		}
-
+		
 		var apiURL = bulbIP + apiKey + "/lights/" + bulbID + "/";
 
 		// For changing the color of the smart bulb.
