@@ -96,18 +96,22 @@ $(document).ready(function() {
 	}
 
 	// Light functions.
-	async function light(action, id, args) {
-		var bulb_ip = "http://192.168.0.50/api/";
+	async function light(action, args) {
+		var bulbIP = "http://192.168.0.50/api/";
+		var bulbID = "13";
 		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
 
-		if(window.localStorage.getItem("api-url") != null) {
-			apiURL = window.localStorage.getItem("api-url");
+		if(window.localStorage.getItem("bulb-ip") != null) {
+			bulbIP = "http://" + window.localStorage.getItem("bulb-ip") + "/api/";
+		}
+		if(window.localStorage.getItem("bulb-id") != null) {
+			bulbID = window.localStorage.getItem("bulb-id");
 		}
 		if(window.localStorage.getItem("api-key") != null) {
 			apiKey = window.localStorage.getItem("api-key");
 		}
 
-		var apiURL = bulb_ip + apiKey + "/lights/" + id + "/";
+		var apiURL = bulbIP + apiKey + "/lights/" + bulbID + "/";
 
 		if(action == "set-color") {
 			if(args == "blue") {
@@ -144,7 +148,7 @@ $(document).ready(function() {
 							type:"PUT",
 							data:JSON.stringify({"on":power}),
 							success:function(data) {
-								
+
 							}
 						});
 					}
