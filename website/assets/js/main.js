@@ -100,7 +100,7 @@ $(document).ready(function() {
 	}
 
 	// Light functions.
-	async function light(action, args) {
+	function light(action, args) {
 		var bulbIP = "http://192.168.0.50/api/";
 		var bulbID = "13";
 		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
@@ -130,6 +130,9 @@ $(document).ready(function() {
 				data:JSON.stringify({"hue":color}),
 				success:function(data) {
 
+				},
+				error:function(data) {
+					console.log(error);
 				}
 			});
 		}
@@ -137,7 +140,6 @@ $(document).ready(function() {
 			$.ajax({
 				url:apiURL,
 				type:"GET",
-				async:true,
 				success:function(data) {
 					if(data != null && data != "") {
 						if(args == "off") {
@@ -152,9 +154,15 @@ $(document).ready(function() {
 							data:JSON.stringify({"on":power}),
 							success:function(data) {
 
+							},
+							error:function(data) {
+								console.log(error);
 							}
 						});
 					}
+				},
+				error:function(data) {
+					console.log(error);
 				}
 			});
 		}
