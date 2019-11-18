@@ -1,5 +1,7 @@
 // Ensures that the DOM content has already finished loading.
 $(document).ready(function() {
+	light("set-power", "on");
+	light("set-color", "blue");
 	// To close the menu if the user clicks outside of it.
 	$(".body-wrapper").on("click", function() {
 		if($(this).hasClass("extended")) {
@@ -47,6 +49,7 @@ $(document).ready(function() {
 				var player = $(".application-player").text().toLowerCase();
 				// The square the user clicked on gets a "filled" class added to its class list. This keeps track of which squares have been filled.
 				$(this).text(player).addClass("filled");
+				light("set-power", "on");
 				if(player == "x") {
 					$(".application-player").text("o").attr("data-player", "o");
 					light("set-color", "pink");
@@ -92,6 +95,7 @@ $(document).ready(function() {
 		$(".application-wrapper td.filled").text("").removeClass("filled").removeAttr("style");
 		$(".application-header").html('It\'s <span class="application-player">X</span>\'s Turn').addClass("active");
 		$(".application-overlay").hide();
+		light("set-power", "on");
 		light("set-color", "blue");
 	}
 
@@ -136,12 +140,11 @@ $(document).ready(function() {
 				async:true,
 				success:function(data) {
 					if(data != null && data != "") {
-						var power = JSON.parse(data)["state"]["on"];
-						if(power) {
-							power = false;
+						if(args == "off") {
+							var power = false;
 						}
-						else {
-							power = true;
+						else if(args == "on") {
+							var power = true;
 						}
 						$.ajax({
 							url:apiURL,
@@ -216,12 +219,14 @@ $(document).ready(function() {
 			$(".application-score." + player).html(parseInt($(".application-score." + player).html()) + 1);
 			$(".application-header").html('<span class="application-player" data-player="' + player + '">' + player + '</span> Wins').removeClass("active");
 			$(".application-overlay").show();
+			light("set-power", "off");
 		}
 		else {
 			// If all squres are filled, and no winner has been found, then the game must be over without any winners.
 			if($(".filled").length == 9) {
 				$(".application-header").text("Nobody Wins").removeClass("active");
 				$(".application-overlay").show();
+				light("set-power", "off");
 			}
 		}
 	}
