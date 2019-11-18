@@ -8,7 +8,7 @@ I call it Tic-Tac-Hue. It's a web-based Tic-Tac-Toe game that uses Philips Hue s
 
 ### Does it have copyrighted content?
 
-No. The code's written by myself, with the exception of jQuery itself of course, and the favicon is also a custom one I made using Photoshop and an icon glyph from Font Awesome, which is completely royalty free for both personal and commercial use.
+No. The code's written by myself, with the exception of jQuery itself of course, and the favicon is also a custom one I made using Photoshop and an icon glyph from Font Awesome, which is completely royalty free for both personal and commercial use. It also contains SVG paths derived from Font Awesome.
 
 ### Notice
 
