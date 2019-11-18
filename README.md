@@ -13,6 +13,7 @@ No. The code's written by myself, with the exception of [jQuery](https://jquery.
 ### Credits
 
 jQuery: https://jquery.com/
+
 Font Awesome: https://fontawesome.com/
 
 ### Notice
