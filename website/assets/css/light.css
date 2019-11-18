@@ -118,6 +118,46 @@ button {
 	top:30px;
 }
 
+.cards-wrapper {
+
+}
+.card {
+
+}
+.card-icon-wrapper {
+
+}
+.card-icon-wrapper svg {
+	width:64px;
+	height:64px;
+	padding:15px;
+	shape-rendering:geometricPrecision;
+}
+.card-icon-wrapper .info-icon {
+	fill:url("#gradient-info");
+}
+.card-icon-wrapper .play-icon {
+	fill:url("#gradient-play");
+}
+.card-icon-wrapper .settings-icon {
+	fill:url("#gradient-settings");
+}
+.card-icon-wrapper .light-icon {
+	fill:url("#gradient-light");
+}
+.card-title-wrapper {
+
+}
+.card-title {
+
+}
+.card-description-wrapper {
+
+}
+.card-description {
+
+}
+
 .menu-wrapper {
 	position:absolute;
 	left:0;
