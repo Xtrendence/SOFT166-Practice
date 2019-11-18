@@ -4,7 +4,11 @@ Practice element of the SOFT166 module. A Tic-Tac-Toe game using Philips Hue sma
  
 ### What is this?
  
-A web-based Tic-Tac-Toe game that uses Philips Hue smart bulbs through the Hue API, along with jQuery AJAX requests to function.
+I call it Tic-Tac-Hue. It's a web-based Tic-Tac-Toe game that uses Philips Hue smart bulbs through the Hue API, along with jQuery AJAX requests to function.
+
+### Does it have copyrighted content?
+
+No. The code's written by myself, with the exception of jQuery of course, and the favicon is also a custom one I made using Photoshop and an icon glyph from Font Awesome, which is completely royalty free for both personal and commercial use.
 
 ### Notice
 
