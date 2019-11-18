@@ -129,9 +129,11 @@ $(document).ready(function() {
 				type:"PUT",
 				data:JSON.stringify({"hue":color}),
 				success:function(data) {
-
+					if(data != "" && data != null) {
+						var response = JSON.parse(data);
+					}
 				},
-				error:function(data) {
+				error:function(error) {
 					console.log(error);
 				}
 			});
@@ -153,15 +155,17 @@ $(document).ready(function() {
 							type:"PUT",
 							data:JSON.stringify({"on":power}),
 							success:function(data) {
-
+								if(data != "" && data != null) {
+									var response = JSON.parse(data);
+								}
 							},
-							error:function(data) {
+							error:function(error) {
 								console.log(error);
 							}
 						});
 					}
 				},
-				error:function(data) {
+				error:function(error) {
 					console.log(error);
 				}
 			});
