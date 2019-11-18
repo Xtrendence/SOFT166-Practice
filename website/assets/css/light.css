@@ -233,6 +233,7 @@ button {
 	margin:10px 0 10px 0;
 	display:inline-block;
 	vertical-align:top;
+	background:rgb(250,250,250);
 }
 .section-submit {
 	display:inline-block;
@@ -253,6 +254,31 @@ button {
 	padding:8px;
 	shape-rendering:geometricPrecision;
 	fill:url("#gradient-check");
+}
+.section-choice {
+	padding:0 20px 0 20px;
+	height:50px;
+	box-shadow:var(--shadow-dark);
+	font-size:16px;
+	color:rgb(100,100,100);
+	background:rgb(250,250,250);
+	border-radius:20px;
+	margin:10px 10px 10px 0;
+	display:inline-block;
+	vertical-align:top;
+	font-weight:bold;
+	cursor:pointer;
+	transition:box-shadow 0.25s;
+}
+.section-choice:hover {
+	box-shadow:var(--shadow-darker);
+}
+.section-choice.active {
+	pointer-events:none;
+	color:rgb(250,250,250);
+	background:#33b7f6;
+	background:linear-gradient(140deg, #33b7f6 5%, #479df8 20%, #6186f6 25%, #8464f0 35%, #ae57cb 45%, #dc529b 60%, #e35691 65%, #f35c71 80%, #fc5b57 100%);
+	background:-webkit-linear-gradient(140deg, #33b7f6 5%, #479df8 20%, #6186f6 25%, #8464f0 35%, #ae57cb 45%, #dc529b 60%, #e35691 65%, #f35c71 80%, #fc5b57 100%);
 }
 
 .menu-wrapper {

@@ -2,6 +2,12 @@
 $(document).ready(function() {
 	light("set-power", "on");
 	light("set-color", "blue");
+
+	// Set theme.
+	if(window.localStorage.getItem("theme") != null) {
+		toggleTheme(window.localStorage.getItem("theme"));
+	}
+
 	// To close the menu if the user clicks outside of it.
 	$(".body-wrapper").on("click", function() {
 		if($(this).hasClass("extended")) {
@@ -64,7 +70,32 @@ $(document).ready(function() {
 		}
 	});
 
-	// Settings functionality.
+	// Settings page functionality.
+	if($("body").hasClass("settings")) {
+		// If the settings page is open, then check which theme is active and change the appearance of the appropriate button to reflect that.
+		$(".section-choice.theme").removeClass("active");
+		if(window.localStorage.getItem("theme") != null) {
+			$(".section-choice.theme." + window.localStorage.getItem("theme")).addClass("active");
+		}
+		else {
+			$(".section-choice.theme.light").addClass("active");
+		}
+	}
+	$(".sections-wrapper.settings .section-choice").on("click", function() {
+		if($(this).hasClass("theme")) {
+			$(".section-choice.theme").removeClass("active");
+			if($(this).data("option") == "light") {
+				window.localStorage.setItem("theme", "light");
+				toggleTheme("light");
+				$(".section-choice.theme.light").addClass("active");
+			}
+			else if($(this).data("option") == "dark") {
+				window.localStorage.setItem("theme", "dark");
+				toggleTheme("dark");
+				$(".section-choice.theme.dark").addClass("active");
+			}
+		}
+	});
 	$(".sections-wrapper.settings .section-submit").on("click", function() {
 		var action = $(this).attr("data-action");
 		var value = $(this).prev("input").val().trim();
@@ -108,6 +139,16 @@ $(document).ready(function() {
 			notify("Error", "Please fill out the input field.", "rgb(250,250,250)", 4000);
 		}
 	});
+
+	// Toggle theme.
+	function toggleTheme(color) {
+		if(color == "light") {
+			$(".css-link").attr("href", $(".css-link").attr("href").replace("dark.css", "light.css"));
+		}
+		else if(color == "dark") {
+			$(".css-link").attr("href", $(".css-link").attr("href").replace("light.css", "dark.css"));
+		}
+	}
 
 	function toggleMenu(override) {
 		if($(".icon-wrapper.menu").hasClass("active") || override == "close") {
