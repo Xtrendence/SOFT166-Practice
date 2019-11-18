@@ -184,12 +184,14 @@ button {
 
 .sections-wrapper {
 	position:absolute;
-	height:auto;
+	height:calc(100% - 100px);
 	top:100px;
 	left:0;
 	width:100%;
 	overflow-x:hidden;
-	overflow-y:visible;
+	overflow-y:scroll;
+	scroll-behavior:smooth;
+	-webkit-overflow-scrolling:touch;
 }
 .section {
 	display:block;
