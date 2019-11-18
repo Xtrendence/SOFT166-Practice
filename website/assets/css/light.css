@@ -119,13 +119,33 @@ button {
 }
 
 .cards-wrapper {
-
+	position:absolute;
+	height:calc(100% - 100px);
+	top:100px;
+	left:0;
+	width:100%;
+	text-align:center;
+	font-size:0;
 }
 .card {
-
+	display:inline-block;
+	background:rgb(250,250,250);
+	width:calc(40% - 40px);
+	height:205px;
+	overflow:hidden;
+	margin:20px;
+	vertical-align:top;
+	padding:20px;
+	border-radius:20px;
+	box-shadow:var(--shadow-dark);
+	transition:box-shadow 0.25s;
+	cursor:pointer;
+}
+.card:hover {
+	box-shadow:var(--shadow-darker);
 }
 .card-icon-wrapper {
-
+	padding-top:20px;
 }
 .card-icon-wrapper svg {
 	width:64px;
@@ -146,16 +166,19 @@ button {
 	fill:url("#gradient-light");
 }
 .card-title-wrapper {
-
+	padding:10px 0 10px 0;
 }
 .card-title {
-
+	font-size:18px;
+	color:rgb(100,100,100);
+	font-weight:bold;
 }
 .card-description-wrapper {
-
+	padding:5px 0 10px 0;
 }
 .card-description {
-
+	font-size:14px;
+	color:rgb(150,150,150);
 }
 
 .menu-wrapper {

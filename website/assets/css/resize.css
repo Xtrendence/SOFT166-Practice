@@ -19,6 +19,18 @@
 		bottom:100px;
 	}
 }
+@media screen and (max-width:480px) {
+	body {
+		overflow-y:visible;
+		overflow-x:hidden;
+	}
+	.cards-wrapper {
+		height:auto;
+	}
+	.card {
+		width:calc(100% - 80px);
+	}
+}
 @media screen and (max-width:440px) {
 	.application-header-wrapper {
 		width:300px;

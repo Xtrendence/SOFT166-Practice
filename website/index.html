@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="./assets/css/light.css">
+		<link rel="stylesheet" href="./assets/css/resize.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
@@ -13,114 +14,121 @@
 		<meta name="msapplication-config" content="./assets/img/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 		<script src="./assets/js/jquery.js"></script>
-		<script src="./assets/js/utils.js"></script>
 		<script src="./assets/js/main.js"></script>
-		<title>Tic-Tac-Hue | Home</title>
+		<title>Tic-Tac-Hue</title>
 	</head>
 	<body>
 		<div class="body-wrapper">
 			<div class="cards-wrapper">
-				<div class="card noselect">
-					<div class="card-icon-wrapper">
-						<svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/>
-							<defs>
-								<linearGradient id="gradient-info" style="transform:rotate(20deg) scale(1.3);">
-									<stop offset="5%" stop-color="#33b7f6"/>
-									<stop offset="20%" stop-color="#479df8"/>
-									<stop offset="25%" stop-color="#6186f6"/>
-									<stop offset="35%" stop-color="#8464f0"/>
-									<stop offset="45%" stop-color="#ae57cb"/>
-									<stop offset="60%" stop-color="#dc529b"/>
-									<stop offset="65%" stop-color="#e35691"/>
-									<stop offset="80%" stop-color="#f35c71"/>
-									<stop offset="100%" stop-color="#fc5b57"/>
-								</linearGradient>
-							</defs>
-						</svg>
+				<a href="./about.html">
+					<div class="card noselect">
+						<div class="card-icon-wrapper">
+							<svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/>
+								<defs>
+									<linearGradient id="gradient-info" style="transform:rotate(20deg) scale(1.3);">
+										<stop offset="5%" stop-color="#33b7f6"/>
+										<stop offset="20%" stop-color="#479df8"/>
+										<stop offset="25%" stop-color="#6186f6"/>
+										<stop offset="35%" stop-color="#8464f0"/>
+										<stop offset="45%" stop-color="#ae57cb"/>
+										<stop offset="60%" stop-color="#dc529b"/>
+										<stop offset="65%" stop-color="#e35691"/>
+										<stop offset="80%" stop-color="#f35c71"/>
+										<stop offset="100%" stop-color="#fc5b57"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+						<div class="card-title-wrapper">
+							<span class="card-title">About</span>
+						</div>
+						<div class="card-description-wrapper">
+							<span class="card-description">About this web-app.</span>
+						</div>
 					</div>
-					<div class="card-title-wrapper">
-						<span class="card-title">About</span>
+				</a>
+				<a href="./application.html">
+					<div class="card noselect">
+						<div class="card-icon-wrapper">
+							<svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/>
+								<defs>
+									<linearGradient id="gradient-play" style="transform:rotate(20deg) scale(1.3);">
+										<stop offset="5%" stop-color="#33b7f6"/>
+										<stop offset="20%" stop-color="#479df8"/>
+										<stop offset="25%" stop-color="#6186f6"/>
+										<stop offset="35%" stop-color="#8464f0"/>
+										<stop offset="45%" stop-color="#ae57cb"/>
+										<stop offset="60%" stop-color="#dc529b"/>
+										<stop offset="65%" stop-color="#e35691"/>
+										<stop offset="80%" stop-color="#f35c71"/>
+										<stop offset="100%" stop-color="#fc5b57"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+						<div class="card-title-wrapper">
+							<span class="card-title">Application</span>
+						</div>
+						<div class="card-description-wrapper">
+							<span class="card-description">Play some Tic-Tac-Toe.</span>
+						</div>
 					</div>
-					<div class="card-description-wrapper">
-						<span class="card-description">About this web-app.</span>
+				</a>
+				<a href="./settings.html">
+					<div class="card noselect">
+						<div class="card-icon-wrapper">
+							<svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/>
+								<defs>
+									<linearGradient id="gradient-settings" style="transform:rotate(20deg) scale(1.3);">
+										<stop offset="5%" stop-color="#33b7f6"/>
+										<stop offset="20%" stop-color="#479df8"/>
+										<stop offset="25%" stop-color="#6186f6"/>
+										<stop offset="35%" stop-color="#8464f0"/>
+										<stop offset="45%" stop-color="#ae57cb"/>
+										<stop offset="60%" stop-color="#dc529b"/>
+										<stop offset="65%" stop-color="#e35691"/>
+										<stop offset="80%" stop-color="#f35c71"/>
+										<stop offset="100%" stop-color="#fc5b57"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+						<div class="card-title-wrapper">
+							<span class="card-title">Settings</span>
+						</div>
+						<div class="card-description-wrapper">
+							<span class="card-description">Select your preferences.</span>
+						</div>
+					</div>
+				</a>
+				<a href="./lights.html">
+					<div class="card noselect">
+						<div class="card-icon-wrapper">
+							<svg class="light-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/>
+								<defs>
+									<linearGradient id="gradient-light" style="transform:rotate(20deg) scale(1.3);">
+										<stop offset="5%" stop-color="#33b7f6"/>
+										<stop offset="20%" stop-color="#479df8"/>
+										<stop offset="25%" stop-color="#6186f6"/>
+										<stop offset="35%" stop-color="#8464f0"/>
+										<stop offset="45%" stop-color="#ae57cb"/>
+										<stop offset="60%" stop-color="#dc529b"/>
+										<stop offset="65%" stop-color="#e35691"/>
+										<stop offset="80%" stop-color="#f35c71"/>
+										<stop offset="100%" stop-color="#fc5b57"/>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+						<div class="card-title-wrapper">
+							<span class="card-title">Light Keys</span>
+						</div>
+						<div class="card-description-wrapper">
+							<span class="card-description">Find out what the lightbulb represents.</span>
+						</div>
 					</div>
 				</div>
-				<div class="card noselect">
-					<div class="card-icon-wrapper">
-						<svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/>
-							<defs>
-								<linearGradient id="gradient-play" style="transform:rotate(20deg) scale(1.3);">
-									<stop offset="5%" stop-color="#33b7f6"/>
-									<stop offset="20%" stop-color="#479df8"/>
-									<stop offset="25%" stop-color="#6186f6"/>
-									<stop offset="35%" stop-color="#8464f0"/>
-									<stop offset="45%" stop-color="#ae57cb"/>
-									<stop offset="60%" stop-color="#dc529b"/>
-									<stop offset="65%" stop-color="#e35691"/>
-									<stop offset="80%" stop-color="#f35c71"/>
-									<stop offset="100%" stop-color="#fc5b57"/>
-								</linearGradient>
-							</defs>
-						</svg>
-					</div>
-					<div class="card-title-wrapper">
-						<span class="card-title">Application</span>
-					</div>
-					<div class="card-description-wrapper">
-						<span class="card-description">Play some Tic-Tac-Toe.</span>
-					</div>
-				</div>
-				<div class="card noselect">
-					<div class="card-icon-wrapper">
-						<svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/>
-							<defs>
-								<linearGradient id="gradient-settings" style="transform:rotate(20deg) scale(1.3);">
-									<stop offset="5%" stop-color="#33b7f6"/>
-									<stop offset="20%" stop-color="#479df8"/>
-									<stop offset="25%" stop-color="#6186f6"/>
-									<stop offset="35%" stop-color="#8464f0"/>
-									<stop offset="45%" stop-color="#ae57cb"/>
-									<stop offset="60%" stop-color="#dc529b"/>
-									<stop offset="65%" stop-color="#e35691"/>
-									<stop offset="80%" stop-color="#f35c71"/>
-									<stop offset="100%" stop-color="#fc5b57"/>
-								</linearGradient>
-							</defs>
-						</svg>
-					</div>
-					<div class="card-title-wrapper">
-						<span class="card-title">Settings</span>
-					</div>
-					<div class="card-description-wrapper">
-						<span class="card-description">Select your preferences.</span>
-					</div>
-				</div>
-				<div class="card noselect">
-					<div class="card-icon-wrapper">
-						<svg class="light-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/>
-							<defs>
-								<linearGradient id="gradient-light" style="transform:rotate(20deg) scale(1.3);">
-									<stop offset="5%" stop-color="#33b7f6"/>
-									<stop offset="20%" stop-color="#479df8"/>
-									<stop offset="25%" stop-color="#6186f6"/>
-									<stop offset="35%" stop-color="#8464f0"/>
-									<stop offset="45%" stop-color="#ae57cb"/>
-									<stop offset="60%" stop-color="#dc529b"/>
-									<stop offset="65%" stop-color="#e35691"/>
-									<stop offset="80%" stop-color="#f35c71"/>
-									<stop offset="100%" stop-color="#fc5b57"/>
-								</linearGradient>
-							</defs>
-						</svg>
-					</div>
-					<div class="card-title-wrapper">
-						<span class="card-title">Light Keys</span>
-					</div>
-					<div class="card-description-wrapper">
-						<span class="card-description">Find out what the lightbulb represents.</span>
-					</div>
-				</div>
-			</div>
+			</a>
 			<span class="icon-title noselect github left">GitHub</span>
 			<a href="https://www.github.com/Xtrendence/SOFT166-Practice/" target="_blank">
 				<div class="icon-wrapper github">
