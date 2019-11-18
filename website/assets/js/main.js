@@ -12,7 +12,7 @@ $(document).ready(function() {
 		toggleMenu();
 	});
 
-	// To reset the game.
+	// To reset the game. Scores aren't preserved.
 	$(".icon-wrapper.reset").on("click", function() {
 		resetGame();
 	});
@@ -34,7 +34,7 @@ $(document).ready(function() {
 		$(".icon-title.github").css("opacity", "0");
 	});
 
-	// To restart the game.
+	// To restart the game. Scores are preserved.
 	$(".application-restart").on("click", function() {
 		restartGame();
 	});
@@ -49,9 +49,11 @@ $(document).ready(function() {
 				$(this).text(player).addClass("filled");
 				if(player == "x") {
 					$(".application-player").text("o").attr("data-player", "o");
+					light("set-color", "pink");
 				}
 				else {
 					$(".application-player").text("x").attr("data-player", "x");
+					light("set-color", "blue");
 				}
 				colorCells();
 				checkWin(player);
@@ -90,6 +92,65 @@ $(document).ready(function() {
 		$(".application-wrapper td.filled").text("").removeClass("filled").removeAttr("style");
 		$(".application-header").html('It\'s <span class="application-player">X</span>\'s Turn').addClass("active");
 		$(".application-overlay").hide();
+		light("set-color", "blue");
+	}
+
+	// Light functions.
+	async function light(action, id, args) {
+		var bulb_ip = "http://192.168.0.50/api/";
+		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
+
+		if(window.localStorage.getItem("api-url") != null) {
+			apiURL = window.localStorage.getItem("api-url");
+		}
+		if(window.localStorage.getItem("api-key") != null) {
+			apiKey = window.localStorage.getItem("api-key");
+		}
+
+		var apiURL = bulb_ip + apiKey + "/lights/" + id + "/";
+
+		if(action == "set-color") {
+			if(args == "blue") {
+				var color = 20010050;
+			}
+			else if(args == "pink") {
+				var color = 29510050;
+			}
+			$.ajax({
+				url:apiURL,
+				type:"PUT",
+				data:JSON.stringify({"hue":color}),
+				success:function(data) {
+
+				}
+			});
+		}
+		else if(action == "set-power") {
+			$.ajax({
+				url:apiURL,
+				type:"GET",
+				async:true,
+				success:function(data) {
+					if(data != null && data != "") {
+						var power = JSON.parse(data)["state"]["on"];
+						if(power) {
+							power = false;
+						}
+						else {
+							power = true;
+						}
+						$.ajax({
+							url:apiURL,
+							type:"PUT",
+							data:JSON.stringify({"on":power}),
+							success:function(data) {
+								
+							}
+						});
+					}
+				}
+			});
+		}
 	}
 
 	// Checks each cell or square on the board, and sets the font color to blue if it's an X, or pink if it's an O.
