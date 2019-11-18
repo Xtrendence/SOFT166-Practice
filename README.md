@@ -1,10 +1,15 @@
 # SOFT166-Practice
- Practice element of the SOFT166 module. A Tic-Tac-Toe game using Philips Hue smart bulbs.
+
+Practice element of the SOFT166 module. A Tic-Tac-Toe game using Philips Hue smart bulbs.
  
- ### What is this?
+### What is this?
  
- A web-based Tic-Tac-Toe game that uses Philips Hue smart bulbs through the Hue API, along with jQuery AJAX requests to function.
+A web-based Tic-Tac-Toe game that uses Philips Hue smart bulbs through the Hue API, along with jQuery AJAX requests to function.
+
+### Notice
+
+This was made as part of a university assignment. For a more complex example of my coding, please see other projects such as [X:/Anonymous](https://github.com/Xtrendence/X-Anonymous).
  
- ---
+---
 
 You can view the planning for this web app by looking at its [Trello project board](https://trello.com/b/RTbY8O4O/soft166-practice).
