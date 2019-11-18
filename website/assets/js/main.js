@@ -71,18 +71,33 @@ $(document).ready(function() {
 		if(value != null && value != "") {
 			if(action == "save-api-key") {
 				window.localStorage.setItem("api-key", value);
-				notify("Saved", "The API Key has been saved.", "rgb(250,250,250)", 4000);
+				if(window.localStorage.getItem("api-key") != null) {
+					notify("Saved", "The API Key has been saved.", "rgb(250,250,250)", 4000);
+				}
+				else {
+					notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+				}
 			}
 			else if(action == "save-bulb-ip") {
 				// The "light()" function adds the "http://" and "/api/" part to the API endpoint URL, so they are removed if the user accidentally includes them.
 				window.localStorage.setItem("bulb-ip", value.replace("http://", "").replace("/api/", ""));
-				notify("Saved", "The Bulb IP has been saved.", "rgb(250,250,250)", 4000);
+				if(window.localStorage.getItem("bulb-ip") != null) {
+					notify("Saved", "The Bulb IP has been saved.", "rgb(250,250,250)", 4000);
+				}
+				else {
+					notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+				}
 			}
 			else if(action == "save-bulb-id") {
 				// The bulb ID is always an integer.
 				if(Number.isInteger(value)) {
 					window.localStorage.setItem("bulb-id", value);
-					notify("Saved", "The Bulb ID has been saved.", "rgb(250,250,250)", 4000);
+					if(window.localStorage.getItem("bulb-id") != null) {
+						notify("Saved", "The Bulb ID has been saved.", "rgb(250,250,250)", 4000);
+					}
+					else {
+						notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+					}
 				}
 				else {
 					notify("Error", "The Bulb ID has to be a number.", "rgb(250,250,250)", 4000);
