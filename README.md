@@ -40,65 +40,43 @@ You can view the planning for this web app by looking at its [Trello project boa
 
 <details><summary>Chrome</summary>
  
-![Menu](#)
+![Menu](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e31a4c71707ca65768c/d120dd4e395185fe158603133626348e/Chrome1.png)
  
-![Responsiveness](#)
+![Responsiveness](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e31a4c71707ca65768c/77969e321c08d76ee024519e10aa3d27/Chrome2.png)
 
-![Local Storage](#)
+![Interacting With The Game Board](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e31a4c71707ca65768c/915b5d164e0d9ba0be666f4a6ec051e8/Chrome3.png)
 
-![Interacting With The Game Board](#)
+![Overflow Scrolling](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e31a4c71707ca65768c/11edc500ca9bd9dd75c7d719f58582d8/Chrome4.png)
 
-![Overflow Scrolling](#)
-
-![Inputs](#)
+![Inputs](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e31a4c71707ca65768c/59742bfe263210f114977d779d1d6523/Chrome5.png)
 
 </details>
 
 <details><summary>Firefox</summary>
  
-![Menu](#)
+![Menu](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3310e2c00dcbe86b86/dd1d89124c70b178b53aa0528ae9d4fa/Firefox1.png)
  
-![Responsiveness](#)
+![Responsiveness](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3310e2c00dcbe86b86/ec3719ecaa23e8341b2c40f5ac57b78e/Firefox2.png)
 
-![Local Storage](#)
+![Interacting With The Game Board](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3310e2c00dcbe86b86/cb42364fba38b7f80691a1949bc110ec/Firefox3.png)
 
-![Interacting With The Game Board](#)
+![Overflow Scrolling](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3310e2c00dcbe86b86/dee3d90750f24c74313c2debd0f80221/Firefox4.png)
 
-![Overflow Scrolling](#)
-
-![Inputs](#)
-
-</details>
-
-<details><summary>Edge</summary>
- 
-![Menu](#)
- 
-![Responsiveness](#)
-
-![Local Storage](#)
-
-![Interacting With The Game Board](#)
-
-![Overflow Scrolling](#)
-
-![Inputs](#)
+![Inputs](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3310e2c00dcbe86b86/34e33be00a1fe97860e04d1b7d9cf648/Firefox5.png)
 
 </details>
 
 <details><summary>Safari</summary>
  
-![Menu](#)
+![Menu](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3807e14f4f70ded9dc/8dd1e83026477d942aefb66c3a028224/Safari1.png)
  
-![Responsiveness](#)
+![Responsiveness](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3807e14f4f70ded9dc/0a6e8aceb4d2cfd9affbba812440cd07/Safari2.png)
 
-![Local Storage](#)
+![Interacting With The Game Board](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3807e14f4f70ded9dc/548d946d3211d6c0b759fc3f7c144f5e/Safari3.png)
 
-![Interacting With The Game Board](#)
+![Overflow Scrolling](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3807e14f4f70ded9dc/96b3e46beae146e77c6083dd636b1a19/Safari4.png)
 
-![Overflow Scrolling](#)
-
-![Inputs](#)
+![Inputs](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e3807e14f4f70ded9dc/2d41f8f5b30f3228ea5782098ad67547/Safari5.png)
 
 </details>
 
