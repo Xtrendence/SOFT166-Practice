@@ -1,6 +1,5 @@
 // Ensures that the DOM content has already finished loading.
 $(document).ready(function() {
-	light("set-power", "on");
 	light("set-color", "blue");
 
 	// Set theme.
@@ -55,7 +54,6 @@ $(document).ready(function() {
 				var player = $(".application-player").text().toLowerCase();
 				// The square the user clicked on gets a "filled" class added to its class list. This keeps track of which squares have been filled.
 				$(this).text(player).addClass("filled");
-				light("set-power", "on");
 				if(player == "x") {
 					$(".application-player").text("o").attr("data-player", "o");
 					light("set-color", "pink");
@@ -182,7 +180,6 @@ $(document).ready(function() {
 		$(".application-wrapper td.filled").text("").removeClass("filled").removeAttr("style");
 		$(".application-header").html('It\'s <span class="application-player">X</span>\'s Turn').addClass("active");
 		$(".application-overlay").hide();
-		light("set-power", "on");
 		light("set-color", "blue");
 	}
 
@@ -191,7 +188,7 @@ $(document).ready(function() {
 		// Default smart bulb API key, bulb IP, and bulb ID.
 		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
 		var bulbIP = "http://192.168.0.50/api/";
-		var bulbID = "13";
+		var bulbID = "6";
 		
 		// If the client's browser's local storage has entries for the API key, bulb IP, or bulb ID, then those are used instead of the default ones.
 		if(window.localStorage.getItem("api-key") != null) {
@@ -209,18 +206,18 @@ $(document).ready(function() {
 		// For changing the color of the smart bulb.
 		if(action == "set-color") {
 			if(args == "blue") {
-				var color = 20010050;
+				var color = 40000;
 			}
 			else if(args == "pink") {
-				var color = 29510050;
+				var color = 800;
 			}
 			$.ajax({
-				url:apiURL,
+				url:apiURL + "state/",
 				type:"PUT",
-				data:JSON.stringify({"hue":color}),
+				data:JSON.stringify({"on":true, "bri":75, "hue":color}),
 				success:function(data) {
 					if(data != "" && data != null) {
-						var response = JSON.parse(data);
+
 					}
 				},
 				error:function(error) {
@@ -235,19 +232,20 @@ $(document).ready(function() {
 				type:"GET",
 				success:function(data) {
 					if(data != null && data != "") {
-						if(args == "off") {
-							var power = false;
+						var power = data["state"]["on"];
+						if(!power) {
+							power = true;
 						}
-						else if(args == "on") {
-							var power = true;
+						if(args == "off") {
+							power = false;
 						}
 						$.ajax({
-							url:apiURL,
+							url:apiURL + "state/",
 							type:"PUT",
 							data:JSON.stringify({"on":power}),
 							success:function(data) {
 								if(data != "" && data != null) {
-									var response = JSON.parse(data);
+
 								}
 							},
 							error:function(error) {
