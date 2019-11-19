@@ -80,7 +80,15 @@ You can view the planning for this web app by looking at its [Trello project boa
 
 </details>
 
-[Web Accessibility Initiative](#)
+<details><summary>Web Accessibility Initiative</summary>
+
+![Home Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e89246d9f8e7cdcd28b/d5747963263bea60a729ea04094df48b/WAI1.png)
+
+![About Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e89246d9f8e7cdcd28b/2b3ec390e28c175f6d2f6927032f179e/WAI2.png)
+
+![Application Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30e89246d9f8e7cdcd28b/8e342d66ec4312f048bf6e3f3d925304/WAI3.png)
+
+</details>
 
 ### Screenshots
 
