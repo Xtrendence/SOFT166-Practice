@@ -281,6 +281,13 @@ button {
 	background:-webkit-linear-gradient(140deg, #33b7f6 5%, #479df8 20%, #6186f6 25%, #8464f0 35%, #ae57cb 45%, #dc529b 60%, #e35691 65%, #f35c71 80%, #fc5b57 100%);
 }
 
+.text-blue {
+	color:#6186f6;
+}
+.text-pink {
+	color:#dc529b;
+}
+
 .menu-wrapper {
 	position:absolute;
 	left:0;
@@ -485,9 +492,8 @@ button {
 	overflow:hidden;
 	border-radius:5px;
 	display:none;
-	background:rgb(0,150,255);
+	background:rgb(250,250,250);
 	box-shadow:var(--shadow-dark);
-	color:rgb(245,245,245);
 }
 .notification-title-wrapper {
 	display:block;

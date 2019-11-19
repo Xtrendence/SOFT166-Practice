@@ -101,20 +101,20 @@ $(document).ready(function() {
 			if(action == "save-api-key") {
 				window.localStorage.setItem("api-key", value);
 				if(window.localStorage.getItem("api-key") != null) {
-					notify("Saved", "The API Key has been saved.", "rgb(250,250,250)", 4000);
+					notify("Saved", "The API Key has been saved.", 4000);
 				}
 				else {
-					notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+					notify("Error", "Make sure your browser supports local storage.", 4000);
 				}
 			}
 			else if(action == "save-bulb-ip") {
 				// The "light()" function adds the "http://" and "/api/" part to the API endpoint URL, so they are removed if the user accidentally includes them.
 				window.localStorage.setItem("bulb-ip", value.replace("http://", "").replace("/api/", ""));
 				if(window.localStorage.getItem("bulb-ip") != null) {
-					notify("Saved", "The Bulb IP has been saved.", "rgb(250,250,250)", 4000);
+					notify("Saved", "The Bulb IP has been saved.", 4000);
 				}
 				else {
-					notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+					notify("Error", "Make sure your browser supports local storage.", 4000);
 				}
 			}
 			else if(action == "save-bulb-id") {
@@ -122,19 +122,19 @@ $(document).ready(function() {
 				if(Number.isInteger(value)) {
 					window.localStorage.setItem("bulb-id", value);
 					if(window.localStorage.getItem("bulb-id") != null) {
-						notify("Saved", "The Bulb ID has been saved.", "rgb(250,250,250)", 4000);
+						notify("Saved", "The Bulb ID has been saved.", 4000);
 					}
 					else {
-						notify("Error", "Make sure your browser supports local storage.", "rgb(250,250,250)", 4000);
+						notify("Error", "Make sure your browser supports local storage.", 4000);
 					}
 				}
 				else {
-					notify("Error", "The Bulb ID has to be a number.", "rgb(250,250,250)", 4000);
+					notify("Error", "The Bulb ID has to be a number.", 4000);
 				}
 			}
 		}
 		else {
-			notify("Error", "Please fill out the input field.", "rgb(250,250,250)", 4000);
+			notify("Error", "Please fill out the input field.", 4000);
 		}
 	});
 
@@ -172,7 +172,7 @@ $(document).ready(function() {
 	function resetGame() {
 		restartGame();
 		$(".application-score").html("0");
-		notify("Reset", "The game has been reset.", "rgb(250,250,250)", 4000);
+		notify("Reset", "The game has been reset.", 4000);
 	}
 
 	// Restarts the game. The player scores are preserved.
@@ -333,7 +333,7 @@ $(document).ready(function() {
 	}
 
 	// Notification function.
-	function notify(title, description, color, duration) {
+	function notify(title, description, duration) {
 		// If the notification area element doesn't already exist, then one is added to the body.
 		if($(".notification-area").length == 0) {
 			$("body").append('<div class="notification-area"></div>');
@@ -342,7 +342,7 @@ $(document).ready(function() {
 		// Add the notification card to the notification area.
 		$(".notification-area").show().append(build);
 		// Show the notification card, and animate its "right" property with a .4s animation from right to left.
-		$(build).show().css({"right":"-600px", "background":color}).animate({right: 0}, 400);
+		$(build).show().css({"right":"-600px"}).animate({right: 0}, 400);
 		setTimeout(function() {
 			// Hide the notification card after a custom duration.
 			$(build).animate({right: -600}, 400);
