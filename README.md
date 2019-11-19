@@ -8,6 +8,10 @@ Practice element of the SOFT166 module. A Tic-Tac-Toe game using Philips Hue sma
  
 I call it Tic-Tac-Hue. It's a web-based Tic-Tac-Toe game that uses Philips Hue smart bulbs through the Hue API, along with jQuery AJAX requests to function.
 
+### Fact Sheet
+
+The [fact sheet](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30ec9d0337730382c24d8/3a74b5e0ed973f0c8f41d185585dffeb/Tic-Tac-Hue_Fact_Sheet.pdf) is in PDF format.
+
 ### Can I see it in action?
 
 Yes. You can watch a [video demo](https://www.youtube.com/watch?v=Uz5zgUV4DGo) of it, or you can download it and use it yourself.
@@ -31,3 +35,81 @@ This was made as part of a university assignment. For a more complex example of 
 ### Planning
 
 You can view the planning for this web app by looking at its [Trello project board](https://trello.com/b/RTbY8O4O/soft166-practice).
+
+### Testing
+
+<details><summary>Chrome</summary>
+ 
+![Menu](#)
+ 
+![Responsiveness](#)
+
+![Local Storage](#)
+
+![Interacting With The Game Board](#)
+
+![Overflow Scrolling](#)
+
+![Inputs](#)
+
+</details>
+
+<details><summary>Firefox</summary>
+ 
+![Menu](#)
+ 
+![Responsiveness](#)
+
+![Local Storage](#)
+
+![Interacting With The Game Board](#)
+
+![Overflow Scrolling](#)
+
+![Inputs](#)
+
+</details>
+
+<details><summary>Edge</summary>
+ 
+![Menu](#)
+ 
+![Responsiveness](#)
+
+![Local Storage](#)
+
+![Interacting With The Game Board](#)
+
+![Overflow Scrolling](#)
+
+![Inputs](#)
+
+</details>
+
+<details><summary>Safari</summary>
+ 
+![Menu](#)
+ 
+![Responsiveness](#)
+
+![Local Storage](#)
+
+![Interacting With The Game Board](#)
+
+![Overflow Scrolling](#)
+
+![Inputs](#)
+
+</details>
+
+[Web Accessibility Initiative](#)
+
+### Screenshots
+
+![Light Mode Home Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30eb5b3dfc83cb4a81f24/d7d64d3f69d7b064da7d45bca7311ddf/light-home.png)
+
+![Light Mode Application Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30eb5b3dfc83cb4a81f24/2d91b9c379fb524794f14eeaa182cec7/light-application.png)
+
+![Dark Mode Home Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30eb5b3dfc83cb4a81f24/892156c0184bae8d37defa5f8f24d7f8/dark-home.png)
+
+![Dark Mode Application Page](https://trello-attachments.s3.amazonaws.com/5dc98eb10ae1b941055d27e3/5dd30eb5b3dfc83cb4a81f24/efa0a22a00d5ccfdf8c7051f3199dfa1/dark-application.png)
