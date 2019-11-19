@@ -119,7 +119,7 @@ $(document).ready(function() {
 			}
 			else if(action == "save-bulb-id") {
 				// The bulb ID is always an integer.
-				if(Number.isInteger(value)) {
+				if(!isNaN(value)) {
 					window.localStorage.setItem("bulb-id", value);
 					if(window.localStorage.getItem("bulb-id") != null) {
 						notify("Saved", "The Bulb ID has been saved.", 4000);
