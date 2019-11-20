@@ -280,6 +280,13 @@ button {
 	background:linear-gradient(140deg, #33b7f6 5%, #479df8 20%, #6186f6 25%, #8464f0 35%, #ae57cb 45%, #dc529b 60%, #e35691 65%, #f35c71 80%, #fc5b57 100%);
 	background:-webkit-linear-gradient(140deg, #33b7f6 5%, #479df8 20%, #6186f6 25%, #8464f0 35%, #ae57cb 45%, #dc529b 60%, #e35691 65%, #f35c71 80%, #fc5b57 100%);
 }
+.section-image {
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	display:block;
+	margin:10px auto 10px auto;
+}
 
 .text-blue {
 	color:#6186f6;

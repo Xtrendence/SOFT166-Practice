@@ -68,6 +68,20 @@ $(document).ready(function() {
 		}
 	});
 
+	// About page functionality.
+	if($("body").hasClass("about")) {
+		var age = Math.floor(yearsSince("24", "09", "1999"));
+		var experience = yearsSince("15", "02", "2017").toFixed(1);
+		$("#age").html(age);
+		$("#experience").html(experience);
+	}
+	function yearsSince(day, month, year) {
+		var timestampDate = Math.round(new Date(year, month, day).getTime() / 1000);
+		var timestampNow = Math.round(new Date().getTime() / 1000);
+		var difference = timestampNow - timestampDate;
+		return difference / (365 * 60 * 60 * 24);
+	}
+
 	// Settings page functionality.
 	if($("body").hasClass("settings")) {
 		// If the settings page is open, then check which theme is active and change the appearance of the appropriate button to reflect that.
