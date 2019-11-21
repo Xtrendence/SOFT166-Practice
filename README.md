@@ -1,4 +1,4 @@
-# SOFT166-Practice
+# SOFT166 Practice (P1/W1)
 
 Practice element of the SOFT166 module. A Tic-Tac-Toe game using Philips Hue smart bulbs.
 
