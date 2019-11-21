@@ -152,6 +152,26 @@ $(document).ready(function() {
 		}
 	});
 
+	$(".sections-wrapper.settings .section-button").on("click", function() {
+		var action = $(this).data("action");
+		if($(this).hasClass("control-power")) {
+			if(action == "on") {
+				light("set-power", "on", true);
+			}
+			else if(action == "off") {
+				light("set-power", "off", true);
+			}
+		}
+		else if($(this).hasClass("control-color")) {
+			if(action == "blue") {
+				light("set-color", "blue", true);
+			}
+			else if(action == "pink") {
+				light("set-color", "pink", true);
+			}
+		}
+	});
+
 	// Toggle theme.
 	function toggleTheme(color) {
 		if(color == "light") {
@@ -198,80 +218,83 @@ $(document).ready(function() {
 	}
 
 	// Light functions.
-	function light(action, args) {
-		// Default smart bulb API key, bulb IP, and bulb ID.
-		var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
-		var bulbIP = "http://192.168.0.50/api/";
-		var bulbID = "6";
-		
-		// If the client's browser's local storage has entries for the API key, bulb IP, or bulb ID, then those are used instead of the default ones.
-		if(window.localStorage.getItem("api-key") != null) {
-			apiKey = window.localStorage.getItem("api-key");
-		}
-		if(window.localStorage.getItem("bulb-ip") != null) {
-			bulbIP = "http://" + window.localStorage.getItem("bulb-ip") + "/api/";
-		}
-		if(window.localStorage.getItem("bulb-id") != null) {
-			bulbID = window.localStorage.getItem("bulb-id");
-		}
-		
-		var apiURL = bulbIP + apiKey + "/lights/" + bulbID + "/";
-
-		// For changing the color of the smart bulb.
-		if(action == "set-color") {
-			if(args == "blue") {
-				var color = 40000;
+	function light(action, args, override) {
+		var enabled = false;
+		if(enabled || override) {
+			// Default smart bulb API key, bulb IP, and bulb ID.
+			var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
+			var bulbIP = "http://192.168.0.50/api/";
+			var bulbID = "6";
+			
+			// If the client's browser's local storage has entries for the API key, bulb IP, or bulb ID, then those are used instead of the default ones.
+			if(window.localStorage.getItem("api-key") != null) {
+				apiKey = window.localStorage.getItem("api-key");
 			}
-			else if(args == "pink") {
-				var color = 800;
+			if(window.localStorage.getItem("bulb-ip") != null) {
+				bulbIP = "http://" + window.localStorage.getItem("bulb-ip") + "/api/";
 			}
-			$.ajax({
-				url:apiURL + "state/",
-				type:"PUT",
-				data:JSON.stringify({"on":true, "bri":75, "hue":color}),
-				success:function(data) {
-					if(data != "" && data != null) {
+			if(window.localStorage.getItem("bulb-id") != null) {
+				bulbID = window.localStorage.getItem("bulb-id");
+			}
+			
+			var apiURL = bulbIP + apiKey + "/lights/" + bulbID + "/";
 
-					}
-				},
-				error:function(error) {
-					console.log(error);
+			// For changing the color of the smart bulb.
+			if(action == "set-color") {
+				if(args == "blue") {
+					var color = 40000;
 				}
-			});
-		}
-		// For changing the power state of the light bulb.
-		else if(action == "set-power") {
-			$.ajax({
-				url:apiURL,
-				type:"GET",
-				success:function(data) {
-					if(data != null && data != "") {
-						var power = data["state"]["on"];
-						if(!power) {
-							power = true;
-						}
-						if(args == "off") {
-							power = false;
-						}
-						$.ajax({
-							url:apiURL + "state/",
-							type:"PUT",
-							data:JSON.stringify({"on":power}),
-							success:function(data) {
-								if(data != "" && data != null) {
+				else if(args == "pink") {
+					var color = 800;
+				}
+				$.ajax({
+					url:apiURL + "state/",
+					type:"PUT",
+					data:JSON.stringify({"on":true, "bri":75, "hue":color}),
+					success:function(data) {
+						if(data != "" && data != null) {
 
-								}
-							},
-							error:function(error) {
-								console.log(error);
+						}
+					},
+					error:function(error) {
+						console.log(error);
+					}
+				});
+			}
+			// For changing the power state of the light bulb.
+			else if(action == "set-power") {
+				$.ajax({
+					url:apiURL,
+					type:"GET",
+					success:function(data) {
+						if(data != null && data != "") {
+							var power = data["state"]["on"];
+							if(!power) {
+								power = true;
 							}
-						});
+							if(args == "off") {
+								power = false;
+							}
+							$.ajax({
+								url:apiURL + "state/",
+								type:"PUT",
+								data:JSON.stringify({"on":power}),
+								success:function(data) {
+									if(data != "" && data != null) {
+
+									}
+								},
+								error:function(error) {
+									console.log(error);
+								}
+							});
+						}
+					},
+					error:function(error) {
+						console.log(error);
 					}
-				},
-				error:function(error) {
-					console.log(error);
-				}
-			});
+				});
+			}
 		}
 	}
 
