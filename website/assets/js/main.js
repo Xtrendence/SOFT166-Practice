@@ -219,7 +219,6 @@ $(document).ready(function() {
 			// Default smart bulb API key, bulb IP, and bulb ID.
 			var apiKey = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
 			var bulbIP = "http://192.168.0.50/api/";
-			ids[0] = "6";
 			
 			// If the client's browser's local storage has entries for the API key, bulb IP, or bulb ID, then those are used instead of the default ones.
 			if(window.localStorage.getItem("api-key") != null) {
@@ -230,7 +229,6 @@ $(document).ready(function() {
 			}
 			if(window.localStorage.getItem("bulb-id") != null) {
 				bulbID = window.localStorage.getItem("bulb-id");
-				console.log(bulbID);
 				if(bulbID.includes(",")) {
 					ids = bulbID.split(",");
 				}
@@ -238,10 +236,12 @@ $(document).ready(function() {
 					ids[0] = bulbID;
 				}
 			}
+			else {
+				ids[0] = "6";
+			}
 			
 			for(var i = 0; i < ids.length; i++) {
 				var apiURL = bulbIP + apiKey + "/lights/" + ids[i].trim() + "/";
-				console.log(apiURL);
 				// For changing the color of the smart bulb.
 				if(action == "set-color") {
 					if(args == "blue") {
@@ -264,30 +264,18 @@ $(document).ready(function() {
 				}
 				// For changing the power state of the light bulb.
 				else if(action == "set-power") {
+					if(args == "off") {
+						power = false;
+					}
+					else {
+						power = true;
+					}
 					$.ajax({
-						url:apiURL,
-						type:"GET",
+						url:apiURL + "state/",
+						type:"PUT",
+						data:JSON.stringify({"on":power}),
 						success:function(data) {
-							if(data != null && data != "") {
-								var power = data["state"]["on"];
-								if(!power) {
-									power = true;
-								}
-								if(args == "off") {
-									power = false;
-								}
-								$.ajax({
-									url:apiURL + "state/",
-									type:"PUT",
-									data:JSON.stringify({"on":power}),
-									success:function(data) {
-										console.log(data);
-									},
-									error:function(error) {
-										console.log(error);
-									}
-								});
-							}
+							console.log(data);
 						},
 						error:function(error) {
 							console.log(error);
