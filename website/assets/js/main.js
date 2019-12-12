@@ -246,14 +246,16 @@ $(document).ready(function() {
 				if(action == "set-color") {
 					if(args == "blue") {
 						var color = 40000;
+						var sat = 250;
 					}
 					else if(args == "pink") {
 						var color = 800;
+						var sat = 140;
 					}
 					$.ajax({
 						url:apiURL + "state/",
 						type:"PUT",
-						data:JSON.stringify({"on":true, "bri":75, "hue":color}),
+						data:JSON.stringify({"on":true, "bri":75, "sat":sat, "hue":color}),
 						success:function(data) {
 							console.log(data);
 						},
